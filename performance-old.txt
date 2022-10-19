@@ -259,8 +259,6 @@ weighted avg       0.57      0.57      0.57     34364
 
 # Top Multinomial Naive Bayes
 ## Emotions:
-### Parameters:
-{'alpha': 0.5}
 ### Confusion Matrix:
 1065	25	3	10	56	13	2	11	2	7	13	1	1	6	1	59	0	37	68	0	663	11	2	13	1	0	5	26	
 60	550	8	17	21	4	2	5	6	3	8	0	0	4	1	9	0	31	14	0	470	5	0	6	0	0	5	6	
@@ -327,8 +325,6 @@ weighted avg       0.57      0.57      0.57     34364
    macro avg       0.33      0.20      0.22     34364
 weighted avg       0.36      0.39      0.35     34364
 ## Sentiments:
-### Parameters:
-{'alpha': 1}
 ### Confusion Matrix:
 909	614	1395	873	
 322	4063	2106	1172	
@@ -349,8 +345,6 @@ weighted avg       0.54      0.55      0.54     34364
 
 # Top Decision Tree
 ## Emotions:
-### Parameters:
-{'criterion': 'gini', 'max_depth': 400, 'min_samples_split': 8}
 ### Confusion Matrix:
 1122	49	11	33	122	17	15	12	10	12	20	7	2	31	1	61	0	52	78	1	367	25	8	10	2	0	6	27	
 68	677	14	44	36	12	13	8	8	11	15	4	1	8	1	12	1	48	15	0	205	4	0	8	1	2	4	15	
@@ -417,8 +411,6 @@ weighted avg       0.54      0.55      0.54     34364
    macro avg       0.29      0.26      0.27     34364
 weighted avg       0.37      0.37      0.37     34364
 ## Sentiments:
-### Parameters:
-{'criterion': 'gini', 'max_depth': 800, 'min_samples_split': 6}
 ### Confusion Matrix:
 1756	628	933	474	
 774	4547	1591	751	
@@ -439,8 +431,6 @@ weighted avg       0.56      0.55      0.55     34364
 
 # Top Multi-Layered Perceptron
 ## Emotions:
-### Parameters:
-{'activation': 'relu', 'hidden_layer_sizes': (30, 50), 'solver': 'adam'}
 ### Confusion Matrix:
 1171	27	3	6	22	18	4	13	3	3	13	4	0	5	2	35	0	42	94	0	573	16	0	1	0	0	6	40	
 44	728	8	13	4	1	0	0	7	0	4	2	0	2	1	5	0	34	20	0	339	4	0	1	0	3	5	10	
@@ -507,8 +497,6 @@ weighted avg       0.56      0.55      0.55     34364
    macro avg       0.33      0.24      0.26     34364
 weighted avg       0.39      0.43      0.38     34364
 ## Sentiments:
-### Parameters:
-{'activation': 'relu', 'early_stopping': True, 'hidden_layer_sizes': (30, 50), 'solver': 'sgd'}
 ### Confusion Matrix:
 868	522	1751	650	
 282	3816	2657	908	
