@@ -26,7 +26,48 @@ Furthermore, there's again the issue of semantics. While "positive" and "negativ
 
 ## 4.2 - Result Analysis
 
-In terms of metrics, this means our accuracy is entirely worthless. Just by always guessing "neutral" in our tests, the model would have a high accuracy (though it doesn't appear to have done that based off of the low metrics).
+### Metrics
+
+By looking at the general performance of all our models, we can tell the accuracy and macro f1 scores are very low in all cases.
+```
+EMOTIONS:
+			BMNB	BDT		BMLP	TMNB	TDT		TMLP	EBMLP		ETMLP			
+accuracy	0.38	0.36	0.43	0.39	0.37	0.43	0.39		0.39
+macro f1	0.16	0.27	0.24	0.22	0.27	0.26	0.18		0.18
+
+avg accuracy		0.3925
+avg macro f1 		0.2225
+
+```
+
+```
+SENTIMENTS:
+			BMNB	BDT		BMLP	TMNB	TDT		TMLP	EBMLP		ETMLP			
+accuracy	0.55	0.55	0.57	0.55	0.55	0.56	0.51		0.50
+Macro F1	0.50	0.53	0.53	0.50	0.53	0.51	0.47		0.47
+
+avg accuracy		0.5425
+avg macro f1 		0.505
+
+```
+
+### Accuracy Versus Macro F1
+
+First let us note the discrepancy between the accuracy and macro f1 scores for the emotions. The average accuracy is almost double that of the average macro f1 score.
+
+This lines up with the analysis made in part 4.1, where we noted that the classes of the emotions were very imbalanced. This means the accuracy is a poor metric in this instance so we will be relying on the macro f1 scores.
+
+We also notice that this discrepancy exists in the sentiments as well, but to a much smaller degree. This is due to the same reason as the above and as was mention in part 4.1, since our "ambiguous" class has too few instances which leads to imbalance.
+
+### Low Scores - Emotions
+
+The very low scores in our models indicate a fundamental problem with the design and implementation of the models and the dataset.
+
+As we can see in the emotions table, the macro f1 score is around 25%. This suggests the model is incredibly ineffective at correctly labeling the Reddit post.
+
+Looking at the confusion matrix of our Base Multinomial Naive Bayes model
+![Confusion Matrix](confusion-matrix.png)
+
 
 
 
