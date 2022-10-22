@@ -61,12 +61,53 @@ We also notice that this discrepancy exists in the sentiments as well, but to a 
 
 ### Low Scores - Emotions
 
-The very low scores in our models indicate a fundamental problem with the design and implementation of the models and the dataset.
+The very low scores in our models indicate a fundamental problem with the design and implementation of the AI and the dataset.
 
-As we can see in the emotions table, the macro f1 score is around 25%. This suggests the model is incredibly ineffective at correctly labeling the Reddit post.
+As we can see in the emotions table, the macro f1 score is around 25%. This suggests the model is incredibly ineffective at correctly labeling the Reddit posts.
 
-Looking at the confusion matrix of our Base Multinomial Naive Bayes model
-![Confusion Matrix](confusion-matrix.png)
+![Confusion Matrix](confusion-matrix-emotions.png)
+
+Looking at the confusion matrix of our Base Multinomial Naive Bayes model we see tit has a tendency of over-predicting "neutral". This undoubtedly stems from the fact that our dataset is extremely unbalanced, resulting in a poor performance. We can see a similar pattern in other confusion matrices as well.
+
+As mentioned in 4.1, I believe another reason for the poor performance is the ambiguity around our classes. Semantically, it is difficult to categorize a statement into one of several emotions when the text could display several of them. This is made increasingly difficult by the very nature of written text, as they often fail to accurately portray the emotions of the writer (which is often the cause of professional misunderstandings).
+
+This problem is made worse by some of our posts having only a handful of words in them. Meaning we cannot gather enough information to properly categorize them.
+
+### Low Scores - Sentiments
+
+Although our sentiments have higher scores than the emotions, they are still much smaller than we would like.
+
+![Confusion Matrix](confusion-matrix-sentiments.png)
+
+As we can observe in the case of the Base Multinomial Naive Bayes model, oru confusion matrix is much more evenly distributed. This again follows the pattern predicted in part 4.1.
+
+Notice how the cases of over estimation correlate with the largest classes. The "ambiguous" class was under estimated due to its comparably low presence in our original dataset.
+
+The results so far indicate that we can improve our AI models by processing our dataset so all classes have a similar proportion.
+
+### Comparing Models
+
+Looking at the macro f1 scores of the different models, we observe an interesting pattern.
+
+In the base case (default parameters), we notice that the Naive Bayes Model underperforms both the Decision Tree and Multi-Layered Perceptron models (both of which have similar results).
+
+In the top case (best parameters), the same pattern as the base case continues. But all models see a slight increase in their performance.
+
+The reason for the low Naive Bayes Model score is likely the sparse nature of our vectorized posts. Since most words in our vocabulary will have a count of 0 per post, there will be a lot of small numbers when calculating the probabilities. This increases the likelihood of underflow problems which negatively affect our results. The other two models are more resistant to underflow problems and are not affected by sparse matrices as much.
+
+### Comparing Count Vectorization And Embeddings
+
+If we compare count vectorization and embeddings, we notice a clear decrease in the embedding scores. The reason for this is likely a combination of the hit-rate and the dimensions of the vectors.
+
+We observed a hit-rate of around 85% for our embeddings, which means on average we consider only 85% of the words in a post. Meaning we have less information to work on compared to count vectorization which uses 100% of the words in a post.
+
+In the case of embeddings, we are also using vectors of size 300 compared to 30,000 in the case of count vectorization. 
+
+
+
+
+
+
 
 
 
