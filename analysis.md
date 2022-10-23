@@ -31,9 +31,9 @@ Furthermore, there's again the issue of semantics. While "positive" and "negativ
 By looking at the general performance of all our models, we can tell the accuracy and macro f1 scores are very low in all cases.
 ```
 EMOTIONS:
-			BMNB	BDT		BMLP	TMNB	TDT		TMLP	EBMLP		ETMLP			
-accuracy	0.38	0.36	0.43	0.39	0.37	0.43	0.39		0.39
-macro f1	0.16	0.27	0.24	0.22	0.27	0.26	0.18		0.18
+            BMNB    BDT    BMLP    TMNB    TDT    TMLP    EBMLP    ETMLP			
+accuracy    0.38    0.36   0.43    0.39    0.37   0.43    0.39     0.39
+macro f1    0.16    0.27   0.24    0.22    0.27   0.26    0.18     0.18
 
 avg accuracy		0.3925
 avg macro f1 		0.2225
@@ -42,9 +42,9 @@ avg macro f1 		0.2225
 
 ```
 SENTIMENTS:
-			BMNB	BDT		BMLP	TMNB	TDT		TMLP	EBMLP		ETMLP			
-accuracy	0.55	0.55	0.57	0.55	0.55	0.56	0.51		0.50
-Macro F1	0.50	0.53	0.53	0.50	0.53	0.51	0.47		0.47
+            BMNB    BDT    BMLP    TMNB    TDT    TMLP    EBMLP    ETMLP			
+accuracy    0.55    0.55   0.57    0.55    0.55   0.56    0.51     0.50
+Macro F1    0.50    0.53   0.53    0.50    0.53   0.51    0.47     0.47
 
 avg accuracy		0.5425
 avg macro f1 		0.505
