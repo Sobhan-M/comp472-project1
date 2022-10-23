@@ -101,7 +101,10 @@ If we compare count vectorization and embeddings, we notice a clear decrease in 
 
 We observed a hit-rate of around 85% for our embeddings, which means on average we consider only 85% of the words in a post. Meaning we have less information to work on compared to count vectorization which uses 100% of the words in a post.
 
-In the case of embeddings, we are also using vectors of size 300 compared to 30,000 in the case of count vectorization. 
+In the case of embeddings, we are also using vectors of size 300 compared to 30,000 in the case of count vectorization. This could be a loss of information for the models, even though the vectors now carry semantic meaning.
+
+## 4.3 - Teamwork
+This project was a solo endeavour, so I was responsible for all tasks.
 
 
 
