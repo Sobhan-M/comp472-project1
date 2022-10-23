@@ -10,7 +10,7 @@ In this project I train and tested several machine learning models on a Reddit p
 ```
 python3.8 -m pip install gensim matplotlib nltk numpy savefig sklearn
 ```
-3. Run each of the files in Jupyter Notebooks in order: `part1.ipynb`, `part2.ipynb`, `part3.ipynb`. You can also run the exploration files in a similar fashion. Running all the cells in order will work.
+3. Run each of the files in Jupyter Notebooks in order: `part1.ipynb`, `part2.ipynb`, `part3.ipynb`. You can also run the exploration files in a similar fashion, at any point. Running all the cells in order will work.
 4. Read the final analysis in the `analysis.md` file.
 ## Note
 When the project was first created I made the mistake of thinking I needed the targets to be numerical values as well, as such the performance files have numbers instead of the class names. They are listed in alphabetical order and I have displayed the indices here.
